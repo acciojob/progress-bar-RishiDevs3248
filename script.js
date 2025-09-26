@@ -6,9 +6,8 @@ let prev = document.getElementById('prev')
 let count = 1;
 next.addEventListener('click',()=>{
 	count++;
-	if(count == 5){
-	    next.disabled = count === circles.length
-	}
+	 prev.disabled = (count === 1);
+    next.disabled = (count === circles.length);
 	
 	             
 	circles.forEach((cir)=>{
@@ -19,9 +18,8 @@ next.addEventListener('click',()=>{
 })
 prev.addEventListener('click',()=>{
 	count--;
-	if(count == 1){
-		prev.disabled = count === 1;   
-	}
+	 prev.disabled = (count === 1);
+    next.disabled = (count === circles.length);
 	circles.forEach((cir)=>{
 		cir.classList.remove('active')
 	})
